@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+    "http://struts.apache.org/dtds/struts-2.5.dtd">
+
+<struts>
+	<!-- 启动开发者模式 -->
+    <constant name="struts.devMode" value="true" />
+
+    <package name="struts_basic" extends="struts-default">
+        <action name="index">
+            <result>/index.jsp</result>
+        </action>
+        <!-- name为url 路径 , -->
+         <action name="hello" class="action.HelloWorldAction" method="execute">
+         <!-- aciton 类 返回success ，执行HelloWorld.jsp -->
+            <result name="success">/HelloWorld.jsp</result>
+        </action>
+    </package>
+
+</struts>
